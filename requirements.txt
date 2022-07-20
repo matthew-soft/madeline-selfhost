@@ -1,4 +1,4 @@
 naff
-python-dotenv
 orjson
+python-dotenv
 samp-client

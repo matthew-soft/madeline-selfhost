@@ -4,11 +4,9 @@ from dotenv import load_dotenv
 from naff import Intents
 from naff.ext.debug_extension import DebugExtension
 
-from core.logging import init_logging
 from core.base import CustomClient
 from core.extensions_loader import load_extensions
-
-
+from core.logging import init_logging
 
 if __name__ == "__main__":
     # load the environmental vars from the .env file
