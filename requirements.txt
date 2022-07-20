@@ -1,0 +1,4 @@
+naff
+python-dotenv
+orjson
+samp-client

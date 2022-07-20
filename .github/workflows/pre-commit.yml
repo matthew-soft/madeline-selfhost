@@ -1,0 +1,39 @@
+name: pre-commit
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: runner / Pre-commit actions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT }}
+      - name: Set up Python
+        uses: actions/setup-python@v2.3.1
+        with:
+          python-version: "3.10.x"
+      - name: Setup annotations
+        uses: PennyDreadfulMTG/setup-linters@main
+      - name: Install Dependencies
+        run: |
+          pip install pre-commit isort
+      - name: Run Isort
+        continue-on-error: true
+        run: |
+          isort .
+      - name: Run Pre-commit
+        continue-on-error: true
+        run: |
+          pre-commit run --all-files
+      - name: Commit Fixes (if any)
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[pre-commit] auto fixes"

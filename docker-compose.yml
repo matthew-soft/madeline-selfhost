@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  samp-query-bot:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - samp-query-bot-network
+    restart:
+      always
+
+networks:
+  samp-query-bot-network:
