@@ -1,3 +1,21 @@
+# samp-query-bot
+
+# This code is part of my bot, Madeline.
+# If you didn't understand this source code works, just invite my bot to your server.
+# https://www.madeline.my.id
+# LICENSED UNDER GNU GPL V3.0
+# https://www.gnu.org/licenses/gpl-3.0.en.html
+# You should add my name to the credits if you use this code.
+
+# For Indonesian:
+# JANGAN MAKELAR GOBLOKKKK, APALAGI NGAKU NGAKU PUNYA LU!
+# SC INI TIDAK DIJUAL, ADA DI GITHUB (https://github.com/clemiee/samp-query-bot)
+# YANG MAKELAR/NGAKU-NGAKU, GW SUMPAHIN BISULAN 7 TURUNAN!
+
+# Copyright (c) 2022-present, Clemie McCartney.
+
+# =================================================================================================================
+
 import datetime
 import os
 from typing import Optional
@@ -94,7 +112,7 @@ class samp(Extension):
 
             if info.players == 0:
                 p_info = Embed(
-                    description=f"<:cross:839158779815657512> No players connected",
+                    description=f":x: No players connected",
                     color=0xFF0000,
                 )  # Create embed
                 p_info.set_footer(
@@ -150,7 +168,7 @@ class samp(Extension):
             return await paginators.send(ctx)
         except:
             embed = Embed(
-                description=f"<:cross:839158779815657512> Couldn't connect to the server",
+                description=f":x: Couldn't connect to the server",
                 color=0xFF0000,
             )
             return await ctx.send(embed=embed)

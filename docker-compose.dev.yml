@@ -2,14 +2,15 @@ version: "3.9"
 
 services:
   samp-query-bot:
-    image: ghcr.io/clemiee/samp-query-bot:master
-    env_file: .env
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
     volumes:
       - ./logs:/app/logs
     networks:
       - samp-query-bot-network
     restart:
-      on-failure
+      always
 
 networks:
   samp-query-bot-network:
