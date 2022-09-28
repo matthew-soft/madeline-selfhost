@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   samp-query-bot:
-    image: ghcr.io/clemiee/samp-query-bot:master
+    image: ghcr.io/madeline-bot/selfhost:master
     env_file: .env
     volumes:
       - ./logs:/app/logs

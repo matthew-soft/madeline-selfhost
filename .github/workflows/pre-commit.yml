@@ -1,8 +1,5 @@
-name: pre-commit
+name: pre-commit-pr
 on:
-  push:
-    branches:
-      - master
   pull_request:
     branches:
       - master
@@ -10,12 +7,18 @@ on:
 
 jobs:
   lint:
-    name: runner / Pre-commit actions
+    name: runner / Pre-commit actions (PR)
     runs-on: ubuntu-latest
     steps:
+      - name: Generate token
+        id: app_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ steps.app_token.outputs.token }}
       - name: Set up Python
         uses: actions/setup-python@v2.3.1
         with:
@@ -24,11 +27,7 @@ jobs:
         uses: PennyDreadfulMTG/setup-linters@main
       - name: Install Dependencies
         run: |
-          pip install pre-commit isort
-      - name: Run Isort
-        continue-on-error: true
-        run: |
-          isort .
+          pip install pre-commit
       - name: Run Pre-commit
         continue-on-error: true
         run: |
@@ -36,4 +35,6 @@ jobs:
       - name: Commit Fixes (if any)
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[pre-commit] auto fixes"
+          commit_message: "fix: pre-commit auto fixes"
+          commit_user_name: ${{ secrets.APP_NAME }}
+          commit_user_email: ${{ secrets.APP_EMAIL }}

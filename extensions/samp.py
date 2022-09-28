@@ -1,6 +1,6 @@
-# samp-query-bot
+# madeline : selfhost edition
 
-# This code is part of my bot, Madeline.
+# This codebase is based on madeline : the discord bot
 # If you didn't understand this source code works, just invite my bot to your server.
 # https://www.madeline.my.id
 # LICENSED UNDER GNU GPL V3.0
@@ -9,10 +9,10 @@
 
 # For Indonesian:
 # JANGAN MAKELAR GOBLOKKKK, APALAGI NGAKU NGAKU PUNYA LU!
-# SC INI TIDAK DIJUAL, ADA DI GITHUB (https://github.com/clemiee/samp-query-bot)
+# SC INI TIDAK DIJUAL, ADA DI GITHUB (https://github.com/madeline-bot/selfhost)
 # YANG MAKELAR/NGAKU-NGAKU, GW SUMPAHIN BISULAN 7 TURUNAN!
 
-# Copyright (c) 2022-present, Clemie McCartney.
+# Copyright (c) 2022-present, MatthewSoft.
 
 # =================================================================================================================
 

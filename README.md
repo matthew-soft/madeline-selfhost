@@ -1,11 +1,11 @@
-# Simple SA-MP Query Bot
+# Madeline : The Discord Bot (Selfhosted Edition)
 
 | Build Production CI | pre-commit checks |
 | :---: | :---: |
-|  [![Build Production](https://github.com/clemiee/samp-query-bot/actions/workflows/build.yml/badge.svg)](https://github.com/clemiee/samp-query-bot/actions/workflows/build.yml)|  [![pre-commit](https://github.com/clemiee/samp-query-bot/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/clemiee/samp-query-bot/actions/workflows/pre-commit.yml)  |
+|  [![Build Production](https://github.com/madeline-bot/selfhost/actions/workflows/build.yml/badge.svg)](https://github.com/madeline-bot/selfhost/actions/workflows/build.yml)|  [![pre-commit](https://github.com/madeline-bot/selfhost/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/madeline-bot/selfhost/actions/workflows/pre-commit.yml)  |
 -------------------------------------------------
 
-A Simple SA-MP Server Query Discord bot made with [NAFF](https://github.com/Discord-Snake-Pit/NAFF).
+Madeline : The Discord bot (selfhost edition) with minimal features to query your favorite server, made with [NAFF](https://github.com/Discord-Snake-Pit/NAFF).
 Visit [the official guide](https://naff.readthedocs.io/Guides/01%20Getting%20Started/) to get started.
 
 # Running the Application
